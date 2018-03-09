@@ -20,7 +20,7 @@ matrix:
       <% if (backend.lint) { %>
       - npm run lint
       <% } %>
-      <% if (backend.dependency-checker) { %>
+      <% if (backend['dependency-checker']) { %>
       - npm run check
       <% } %>
       - cd ../..
@@ -31,7 +31,7 @@ matrix:
       <% if (frontend.lint) { %>
       - npm run lint
       <% } %>
-      <% if (frontend.dependency-checker) { %>
+      <% if (frontend['dependency-checker']) { %>
       - npm run check
       <% } %>
     <% if (backend.tests) { %>

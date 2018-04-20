@@ -34,6 +34,7 @@
     "@shopgate/pwa-common-commerce": "*",
     "@shopgate/pwa-core": "*",
     <% if (frontend.tests) { %>
+    "jest": "^22.4.2",
     "@shopgate/pwa-unit-test": "*",
     <% } %>
     "babel-core": "^6.26.0",

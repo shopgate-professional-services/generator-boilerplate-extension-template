@@ -58,10 +58,8 @@ typings/
 .env
 
 # IDE
-.idea
+.idea/
 
 package-lock.json
-extension/package-lock.json
-frontend/package-lock.json
 frontend/config.json
 extension/config.json

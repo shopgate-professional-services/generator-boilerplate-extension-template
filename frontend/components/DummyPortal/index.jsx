@@ -21,7 +21,7 @@ class DummyPortal extends Component {
   render() {
     return (
       <div className={styles.dummy}>
-        <I18n.Text string={'myExt.dummy'} />
+        <I18n.Text string="myExt.dummy" />
       </div>
     );
   }

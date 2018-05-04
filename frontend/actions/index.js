@@ -13,7 +13,7 @@ import {
  * @param {string} dummyId dummyId
  * @returns {function}
  */
-export const fetchDummies = (dummyId) => (dispatch, getState) => {
+export const fetchDummies = dummyId => (dispatch, getState) => {
   const state = getState();
   const dummies = getDummies(state, dummyId);
 
@@ -25,8 +25,8 @@ export const fetchDummies = (dummyId) => (dispatch, getState) => {
 
   new PipelineRequest('dummy')
     .dispatch()
-    .then((dummies) => {
-      dispatch(receiveDummies(dummyId, dummies));
+    .then((response) => {
+      dispatch(receiveDummies(dummyId, response));
     })
     .catch((err) => {
       logger.error(err);

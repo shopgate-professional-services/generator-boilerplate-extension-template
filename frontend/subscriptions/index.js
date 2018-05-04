@@ -10,4 +10,4 @@ const dummySubscriptions = (subscribe) => {
   });
 };
 
-export default swatchesSubscriptions;
+export default dummySubscriptions;

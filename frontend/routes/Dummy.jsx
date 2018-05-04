@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Route from '@shopgate/pwa-common/components/Router/components/Route';
 import { DUMMY_PATH } from '../constants';
-import pageComponentFactory from './pageComponentFactory';
-import DummyPage from '../Pages/Dummy';
+import pageComponentFactory from './PageComponentFactory';
+import DummyPage from '../pages/Dummy';
 
 /**
  * Dummy route.
@@ -20,7 +20,7 @@ const Dummy = ({ View }) => (
   />
 );
 
-Dashboard.propTypes = {
+Dummy.propTypes = {
   View: PropTypes.func.isRequired,
 };
 

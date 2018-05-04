@@ -5,7 +5,7 @@ import {
 } from '../constants';
 
 /**
- * requestDummies action.
+ * RequestDummies action.
  * @param {string} dummyId dummyId.
  * @returns {Object}
  */
@@ -15,7 +15,7 @@ export const requestDummies = dummyId => ({
 });
 
 /**
- * receiveDummies action.
+ * ReceiveDummies action.
  * @param {string} dummyId dummyId.
  * @param {Array} dummies dummies.
  * @returns {Object}
@@ -27,7 +27,7 @@ export const receiveDummies = (dummyId, dummies) => ({
 });
 
 /**
- * errorDummies action.
+ * ErrorDummies action.
  * @param {string} dummyId dummyId.
  * @returns {Object}
  */

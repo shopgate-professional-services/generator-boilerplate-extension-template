@@ -1,7 +1,7 @@
 {
   "version": "1",
   "pipeline": {
-    "id": "<%= extension.organization %>.<%= extension.name %>.v1",
+    "id": "<%= extension.organization %>.<%= extension.name %>.awesomePipeline.v1",
     "public": true,
     "input": [],
     "output": [],

@@ -9,7 +9,7 @@
       {
         "type": "extension",
         "id": "@awesomeOrganization/awesomePipeline",
-        "path": "@awesomeOrganization/awesomePipeline/awesomeStep.js",
+        "path": "@awesomeOrganization/awesomePipeline/lib/awesomeStep.js",
         "input": [],
         "output": []
       }

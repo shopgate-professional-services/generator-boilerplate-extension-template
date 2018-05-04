@@ -4,12 +4,8 @@
   "description": "",
   "license": "<%= extension.licence %>",
   "scripts": {
-    <% if (backend.active) { %>
-    "precommit:extension": "cd extension && npm run precommit",
-    <% } %>
-    <% if (frontend.active) { %>
-    "precommit:frontend": "cd frontend && npm run precommit",
-    <% } %>
+    <% if (backend.active) { %>"precommit:extension": "cd extension && npm run precommit",<% } %>
+    <% if (frontend.active) { %>"precommit:frontend": "cd frontend && npm run precommit",<% } %>
     "precommit": "npm-run-all precommit:*"
   },
   "devDependencies": {

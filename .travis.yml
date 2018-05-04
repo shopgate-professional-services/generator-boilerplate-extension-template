@@ -49,6 +49,6 @@ matrix:
 notifications:
   slack:
     rooms:
-      secure: <%= travis.slack-secure-key %>
+      secure: <%= travis['slack-secure-key'] %>
     on_success: change
     on_failure: always

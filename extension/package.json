@@ -4,11 +4,9 @@
   "description": "",
   "license": "<%= extension.licence %>",
   "scripts": {
-    <% if (backend['pre-commit']) { %>
-    "precommit": "lint-staged && npm run test",
-    <% } %>
     <% if (backend.tests) { %>
     "test": "_mocha --use_strict --recursive test",
+    "test:watch": "_mocha --watch --use_strict --recursive test",
     "test:unit": "_mocha --use_strict --recursive test/unit",
     "test:integration": "_mocha --use_strict --timeout 3000 --recursive test/integration",
     "cover:unit": "nyc _mocha --recursive test/unit",
@@ -23,12 +21,8 @@
     <% } %>
     "dummy": "dummy"
   },
-  <% if (backend['pre-commit']) { %>
-  "lint-staged": {
-    "*.js": "eslint"
-  },
-  <% } %>
   "devDependencies": {
+    "bunyan": "^1.8.12",
     "@types/bunyan": "^1.8.4",
     <% if (backend.test) { %>
     "@types/chai": "^4.1.2",

@@ -4,9 +4,6 @@
   "description": "",
   "license": "<%= extension.licence %>",
   "scripts": {
-    <% if (frontend['pre-commit']) { %>
-    "precommit": "lint-staged && npm run test",
-    <% } %>
     <% if (frontend.lint) { %>
     "lint": "eslint --parser babel-eslint --ignore-path ../.gitignore --ignore-path .eslintignore --ext .js --ext .jsx .",
     <% } %>
@@ -20,10 +17,6 @@
     "check": "nsp check",
     <% } %>
     "dummy": ""
-  },
-  <% if (frontend['pre-commit']) { %>
-  "lint-staged": {
-  "*.js": "eslint"
   },
   <% } %>
   "devDependencies": {

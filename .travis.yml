@@ -14,28 +14,15 @@ matrix:
       env: TYPE=UNIT_CODESTYLE_DEPENDENCY
       script:
       - cd extension
-      <% if (backend.tests) { %>
-      - npm run test:unit
-      <% } %>
-      <% if (backend.lint) { %>
-      - npm run lint
-      <% } %>
-      <% if (backend['dependency-checker']) { %>
-      - npm run check
-      <% } %>
+      <% if (backend.tests) { %>- npm run test:unit<% } %>
+      <% if (backend.lint) { %>- npm run lint<% } %>
+      <% if (backend['dependency-checker']) { %>- npm run check<% } %>
       - cd ../..
       - cd frontend
-      <% if (frontend.tests) { %>
-      - npm run test
-      <% } %>
-      <% if (frontend.lint) { %>
-      - npm run lint
-      <% } %>
-      <% if (frontend['dependency-checker']) { %>
-      - npm run check
-      <% } %>
-    <% if (backend.tests) { %>
-    - node_js: 8
+      <% if (frontend.tests) { %>- npm run test<% } %>
+      <% if (frontend.lint) { %>- npm run lint<% } %>
+      <% if (frontend['dependency-checker']) { %>- npm run check<% } %>
+    <% if (backend.tests) { %>- node_js: 8
       env: TYPE=INTEGRATION
       script:
       - if [[ "$INTEGRATION_CREDENTIALS" ]]; then echo "${INTEGRATION_CREDENTIALS}" > .integration-credentials.js; fi
@@ -43,8 +30,7 @@ matrix:
       - if [[ "$INTEGRATION_CREDENTIALS" ]]; then npm run test:integration; fi
   allow_failures:
     - node_js: 8
-      env: TYPE=INTEGRATION
-    <% } %>
+      env: TYPE=INTEGRATION<% } %>
 
 notifications:
   slack:

@@ -4,7 +4,6 @@
   "description": "",
   "license": "<%= extension.licence %>",
   "scripts": {
-    <% if (frontend['pre-commit']) { %>"precommit": "lint-staged && npm run test",<% } %>
     <% if (frontend.lint) { %>"lint": "eslint --parser babel-eslint --ignore-path ../.gitignore --ignore-path .eslintignore --ext .js --ext .jsx .", <% } %>
     <% if (frontend.tests) { %>"test": "jest",
     "test:watch": "npm run test -- --watch",
@@ -13,9 +12,6 @@
     <% if (frontend['dependency-checker']) { %>"check": "nsp check",<% } %>
     "dummy": ""
   },
-  <% if (frontend['pre-commit']) { %>"lint-staged": {
-  "*.js": "eslint"
-  },<% } %>
   "devDependencies": {
     <% if (frontend.lint) { %>"@shopgate/eslint-config": "*",<% } %>
     "@shopgate/pwa-common": "*",

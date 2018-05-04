@@ -1,15 +1,15 @@
 {
   "version": "1",
   "pipeline": {
-    "id": "awesomeOrganization.awesomePipeline",
+    "id": "<%= extension.organization %>.<%= extension.name %>.awesomePipeline.v1",
     "public": true,
     "input": [],
     "output": [],
     "steps": [
       {
         "type": "extension",
-        "id": "@awesomeOrganization/awesomePipeline",
-        "path": "@awesomeOrganization/awesomePipeline/lib/awesomeStep.js",
+        "id": "@<%= extension.organization %>/<%= extension.name %>",
+        "path": "@<%= extension.organization %>/<%= extension.name %>/lib/awesomeStep.js",
         "input": [],
         "output": []
       }

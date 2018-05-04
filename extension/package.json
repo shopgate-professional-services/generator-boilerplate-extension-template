@@ -4,47 +4,39 @@
   "description": "",
   "license": "<%= extension.licence %>",
   "scripts": {
-    <% if (backend.tests) { %>
-    "test": "_mocha --use_strict --recursive test",
+    <% if (backend['pre-commit']) { %>"precommit": "lint-staged && npm run test",<% } %>
+    <% if (backend.tests) { %>"test": "mocha --use_strict --recursive test",
     "test:watch": "_mocha --watch --use_strict --recursive test",
-    "test:unit": "_mocha --use_strict --recursive test/unit",
-    "test:integration": "_mocha --use_strict --timeout 3000 --recursive test/integration",
-    "cover:unit": "nyc _mocha --recursive test/unit",
-    "cover:integration": "nyc _mocha --use_strict --timeout 3000 --recursive test/integration",
-    "cover": "nyc _mocha --use_strict --timeout 3000 --recursive test/integration --recursive test/unit",
-    <% } %>
-    <% if (backend.lint) { %>
-    "lint": "eslint --ignore-path ../.gitignore --ignore-path .eslintignore --ext .js .",
-    <% } %>
-    <% if (backend['dependency-checker']) { %>
-    "check": "nsp check",
-    <% } %>
+    "test:unit": "mocha --use_strict --recursive test/unit",
+    "test:integration": "mocha --use_strict --timeout 3000 --recursive test/integration",
+    "cover:unit": "nyc mocha --recursive test/unit",
+    "cover:integration": "nyc mocha --use_strict --timeout 3000 --recursive test/integration",
+    "cover": "nyc mocha --use_strict --timeout 3000 --recursive test/integration --recursive test/unit",<% } %>
+    <% if (backend.lint) { %>"lint": "eslint --ignore-path ../.gitignore --ignore-path .eslintignore --ext .js .",<% } %>
+    <% if (backend['dependency-checker']) { %>"check": "nsp check",<% } %>
     "dummy": "dummy"
   },
+  <% if (backend['pre-commit']) { %>"lint-staged": {
+    "*.js": "eslint"
+  },<% } %>
   "devDependencies": {
     "bunyan": "^1.8.12",
     "@types/bunyan": "^1.8.4",
-    <% if (backend.test) { %>
-    "@types/chai": "^4.1.2",
+    <% if (backend.tests) { %>"@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
     "@types/sinon": "^4.1.3",
     "sinon": "^4.1.2",
     "chai": "^4.1.2",
     "mocha": "^3.2.0",
-    "nyc": "^11.3.0",
-    <% } %>
-    <% if (backend.lint) { %>
-    "lint-staged": "^6.0.0",
+    "nyc": "^11.3.0",<% } %>
+    <% if (backend.lint) { %>"lint-staged": "^6.0.0",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    <% }%>
-    <% if (backend['dependency-checker']) { %>
-    "nsp": "^3.1.0",
-    <% } %>
+    "eslint-plugin-standard": "^3.0.1",<% }%>
+    <% if (backend['dependency-checker']) { %>"nsp": "^3.1.0",<% } %>
     "standard": "^10.0.3"
   }
 }

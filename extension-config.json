@@ -2,7 +2,8 @@
   "version": "0.1.0",
   "id": "@<%= extension.organization %>/<%= extension.name %>",
   "components": [
-    <% if (frontend) { %>
+    <% if (frontend.enabled) { %>
+    {
       "id": "Dummy",
       "path": "frontend/routes/Dummy.jsx",
       "target": "app.routes",

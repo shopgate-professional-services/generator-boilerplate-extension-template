@@ -18,4 +18,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 
 [Unreleased]: https://github.com/shopgate/ext-cliplister/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/shopgate/ext-cliplister/compare/0.0.1...v1.0.0
+[1.0.0]: https://github.com/shopgate/ext-cliplister/compare/v0.0.1...v1.0.0

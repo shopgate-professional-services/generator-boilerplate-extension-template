@@ -12,7 +12,6 @@
     "cover:integration": "nyc mocha --use_strict --timeout 3000 --recursive test/integration",
     "cover": "nyc mocha --use_strict --timeout 3000 --recursive test/integration --recursive test/unit",<% } %>
     <% if (backend.lint) { %>"lint": "eslint --ignore-path ../.gitignore --ignore-path .eslintignore --ext .js .",<% } %>
-    <% if (backend['dependency-checker']) { %>"check": "nsp check",<% } %>
     "dummy": "dummy"
   },
   "devDependencies": {
@@ -32,7 +31,6 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",<% }%>
-    <% if (backend['dependency-checker']) { %>"nsp": "^3.1.0",<% } %>
     "standard": "^10.0.3"
   }
 }

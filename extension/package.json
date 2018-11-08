@@ -23,7 +23,7 @@
     "@types/sinon": "^4.1.3",
     "sinon": "^4.1.2",
     "chai": "^4.1.2",
-    "mocha": "^3.2.0",
+    "mocha": "^5.2.0",
     "nyc": "^11.3.0",<% } %>
     <% if (backend.lint) { %>"lint-staged": "^6.0.0",
     "eslint": "^4.18.2",

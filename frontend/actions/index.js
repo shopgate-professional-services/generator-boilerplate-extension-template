@@ -11,7 +11,7 @@ import {
 /**
  * Get product swatches action.
  * @param {string} dummyId dummyId
- * @returns {function}
+ * @returns {func}
  */
 export const fetchDummies = dummyId => (dispatch, getState) => {
   const state = getState();

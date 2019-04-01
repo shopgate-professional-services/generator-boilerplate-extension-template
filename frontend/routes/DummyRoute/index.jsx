@@ -22,10 +22,4 @@ function DummyPage() {
 /**
  * @returns {JSX}
  */
-function DummyPageRoute() {
-  return (
-    <Route pattern={DUMMY_PATH} component={DummyPage} />
-  );
-}
-
-export default DummyPageRoute;
+export default () => ( <Route pattern={DUMMY_PATH} component={DummyPage} />);

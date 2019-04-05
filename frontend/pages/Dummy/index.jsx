@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withThemeComponents } from '@shopgate-ps/pwa-extension-kit/connectors';
 import connect from './connector';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -35,4 +36,4 @@ class DummyPage extends Component {
 }
 /* eslint-enable react/prefer-stateless-function */
 
-export default connect(DummyPage);
+export default withThemeComponents(connect(DummyPage));

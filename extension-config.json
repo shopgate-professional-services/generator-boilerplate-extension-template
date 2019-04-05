@@ -5,7 +5,7 @@
     <% if (frontend.enabled) { %>
     {
       "id": "Dummy",
-      "path": "frontend/routes/Dummy.jsx",
+      "path": "frontend/routes/DummyRoute/index.jsx",
       "target": "app.routes",
       "type": "portals"
     },

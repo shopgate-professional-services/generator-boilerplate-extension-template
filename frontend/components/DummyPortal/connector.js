@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 
 /**
  * Maps dispatch to props.
- * @param {function} dispatch Dispatch.
+ * @param {Function} dispatch Dispatch.
  * @returns {Object}
  */
 const mapDispatchToProps = dispatch => ({

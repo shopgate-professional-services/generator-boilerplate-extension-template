@@ -44,9 +44,7 @@ const dummyReducer = (
         },
       };
     default:
-      return {
-        ...state,
-      };
+      return state;
   }
 };
 

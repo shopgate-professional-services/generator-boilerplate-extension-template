@@ -2,7 +2,7 @@ import { main$ } from '@shopgate/pwa-common/streams/main';
 
 /**
  * Subscriptions
- * @param {function} subscribe Subscribe.
+ * @param {Function} subscribe Subscribe.
  */
 const dummySubscriptions = (subscribe) => {
   subscribe(main$, ({ dispatch, getState }) => {
